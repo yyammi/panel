@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Cold Corporate Color Palette - Dark (Default) */
+  --color-bg:           #0d1117;
+  --color-surface:      #161b22;
+  --color-surface-2:    #1c2330;
+  --color-border:       #30363d;
+  --color-primary:      #1d6fa4;
+  --color-primary-hover:#2589c7;
+  --color-accent:       #58a6ff;
+  --color-text:         #e6edf3;
+  --color-text-muted:   #8b949e;
+  --color-white:        #ffffff;
+
+  --rgb-surface:        22, 27, 34;
+  --rgb-border:         48, 54, 61;
+  --rgb-accent:         88, 166, 255;
+  --rgb-success:        35, 134, 54;
+  --rgb-danger:         218, 54, 51;
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+
+  /* Spacing */
+  --nav-height: 64px;
+
+  /* Shadow */
+  --shadow-nav: 0 1px 0 rgba(var(--rgb-border), 0.8), 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] {
+  --color-bg:           #f6f8fa;
+  --color-surface:      #ffffff;
+  --color-surface-2:    #f3f4f6;
+  --color-border:       #d0d7de;
+  --color-primary:      #0969da;
+  --color-primary-hover:#0550ae;
+  --color-accent:       #0969da;
+  --color-text:         #1f2328;
+  --color-text-muted:   #656d76;
+
+  --rgb-surface:        255, 255, 255;
+  --rgb-border:         208, 215, 222;
+  --rgb-accent:         9, 105, 218;
+  --rgb-success:        45, 164, 78;
+  --rgb-danger:         207, 34, 46;
+  
+  --shadow-nav: 0 1px 0 rgba(var(--rgb-border), 0.8), 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-family);
+}
+
+input {
+  font-family: var(--font-family);
+}
