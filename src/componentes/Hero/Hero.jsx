@@ -88,7 +88,7 @@ export default function Hero() {
             </label>
            <select
               id="nombre"
-              className="hero__input"
+              className="hero__select"
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
             >
