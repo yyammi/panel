@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import './Hero.css'
 
+const empleados = [
+  "Yamila P.",
+  "Milagros S.",
+  "Matias S."
+]
+
 const ROLES = [
   'Administración',
   'Asesor',
@@ -80,16 +86,20 @@ export default function Hero() {
               <span className="hero__label-icon">👤</span>
               Nombre y Apellido
             </label>
-            <input
+           <select
               id="nombre"
-              type="text"
               className="hero__input"
-              placeholder="Ej: Juan García"
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
-              autoComplete="off"
-              maxLength={60}
-            />
+            >
+              <option value="">Seleccionar empleado</option>
+
+              {empleados.map((emp, i) => (
+                <option key={i} value={emp}>
+                  {emp}
+                </option>
+              ))}
+            </select>
           </div>
 
           {/* Rol */}
