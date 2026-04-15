@@ -92,7 +92,7 @@ export default function Hero() {
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
             >
-              <option value="">- Seleccionar empleado -</option>
+              <option value="">— Seleccionar empleado —</option>
 
               {empleados.map((emp, i) => (
                 <option key={i} value={emp}>
