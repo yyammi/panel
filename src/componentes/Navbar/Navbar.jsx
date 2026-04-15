@@ -78,8 +78,8 @@ export default function Navbar() {
 
           {/* ── Logo ── */}
           <a href="#" className="navbar__logo" aria-label="Ir al inicio">
-            <div className="navbar__logo-icon">P</div>
-            <span className="navbar__logo-text">Prueba</span>
+            <div className="navbar__logo-icon">YP</div>
+            <span className="navbar__logo-text">yamiPrueba</span>
           </a>
 
           {/* ── Desktop Links (centered) ── */}
