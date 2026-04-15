@@ -44,7 +44,7 @@ export default function Hero() {
       id: Date.now(),
       nombre: nombreTrim,
       rol,
-      tipo,         // 'ingreso' | 'egreso'
+      tipo,         // 'Ingreso' | 'Egreso'
       hora,
       fecha: new Date().toLocaleDateString('es-AR'),
     }
@@ -58,7 +58,7 @@ export default function Hero() {
     // Emitir evento para que el Panel se actualice
     window.dispatchEvent(new Event('registros-updated'))
 
-    const accion = tipo === 'ingreso' ? 'ingresó' : 'egresó'
+    const accion = tipo === 'ingreso' ? 'Ingreso' : 'Egreso'
     setFeedback({ msg: `✅ ${nombreTrim} (${rol}) ${accion} a las ${hora}hs`, ok: true })
     setNombre('')
     setRol('')

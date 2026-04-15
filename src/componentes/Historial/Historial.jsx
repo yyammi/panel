@@ -43,7 +43,7 @@ export default function Historial() {
     if (!claveGuardada) {
       setModal({
         titulo: "Acceso Denegado",
-        desc: "Aún no tienes clave maestra. Ve a la 'Planilla Diaria' para crear tu primera clave.",
+        desc: "Aún no tienes clave. Ve al 'Panel' para crear tu primera clave.",
         soloAviso: true,
         onConfirm: () => true
       })
@@ -52,7 +52,7 @@ export default function Historial() {
 
     setModal({
       titulo: "Verificar Identidad",
-      desc: "Ingresá tu clave maestra para ver el historial.",
+      desc: "Ingresá tu clave para ver el historial.",
       onConfirm: (val) => {
         if (val === claveGuardada) {
           onSuccess()
@@ -135,8 +135,8 @@ export default function Historial() {
         <div className="historial__header">
           <div>
             <span className="historial__badge">Restringido</span>
-            <h2 className="historial__title">Historial General</h2>
-            <p className="historial__date">Aquí se guardan todos los datos archivados.</p>
+            <h2 className="historial__title">Historial</h2>
+            <p className="historial__date">Aquí se guardan todos los datos diarios.</p>
           </div>
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.25rem' }}>
              <button
@@ -144,21 +144,21 @@ export default function Historial() {
               onClick={handleTogglePrivacidad}
               title="Mostrar/Ocultar datos sensibles"
              >
-                {esOculto ? '🔒 Desbloquear Todo' : '🔓 Bloquear'}
+                {esOculto ? '🔒 Desbloquear' : '🔓 Bloquear'}
              </button>
              <button
               className="historial__action-btn historial__action-btn--primary"
               onClick={handleGenerarRecorte}
               title="Descargar base de datos total"
              >
-                📥 Exportar Todo
+                📥 Exportar 
              </button>
           </div>
         </div>
 
         {registros.length === 0 ? (
           <div className="historial__empty">
-            <span className="historial__empty-icon">📭</span>
+            <span className="historial__empty-icon"></span>
             <p>Todavía no hay planillas archivadas.</p>
           </div>
         ) : (
@@ -207,7 +207,7 @@ export default function Historial() {
                         </span>
                       ) : (
                         <span className={`historial__badge-tipo historial__badge-tipo--${r.eliminado ? 'eliminado' : r.tipo}`}>
-                          {r.tipo === 'ingreso' ? '↗ ingresó' : '↙ egresó'}
+                          {r.tipo === 'ingreso' ? '↗ Ingreso' : '↙ Egreso'}
                         </span>
                       )}
                     </td>

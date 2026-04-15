@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import './Navbar.css'
 
 const NAV_LINKS = [
-  { id: 'interno', label: 'Interno', href: '#interno', icon: '🏢' },
-  { id: 'panel',   label: 'Panel',   href: '#panel',   icon: '📊' },
+  { id: 'interno', label: 'Registro', href: '#interno', icon: '🏢' },
+  { id: 'panel',   label: 'Hoja',   href: '#panel',   icon: '📊' },
   { id: 'historial', label: 'Historial', href: '#historial', icon: '🗂️' },
 ]
 
